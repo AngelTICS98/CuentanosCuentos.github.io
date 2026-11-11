@@ -1,0 +1,235 @@
+/* ===== Estilos para Libro1.html — pegar al final de css/estilo1.css =====
+   Paleta del sitio: #4a3b32 (título), #6c584c (texto), #8c5e3f (acento),
+   #f7ede2 (crema), #ebd5c1 (borde), #fdfbf7 (fondo tarjetas)            */
+
+.libro-detalle {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: #6c584c;
+}
+
+.libro-detalle p,
+.libro-detalle li {
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.libro-detalle strong { font-weight: 700; color: #4a3b32; }
+.libro-detalle em { color: #4a3b32; }
+
+/* Encabezado con fondo de librería (versión compacta) */
+.libro-encabezado {
+    text-align: center;
+    padding: 45px 20px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, rgba(192, 138, 107, 0.8) 0%, rgba(172, 132, 81, 0.8) 50%), url(../img/LIBRERIAS.webp);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 25px rgba(74, 59, 50, 0.15);
+}
+.libro-encabezado .titulo-seccion {
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.libro-encabezado .titulo-seccion::after { background: #fff; }
+.libro-subtitulo {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtítulos de cada bloque (misma línea de acento que .titulo-seccion) */
+.libro-detalle h3 {
+    color: #4a3b32;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.libro-detalle h3::after {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: #8c5e3f;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.libro-bloque { margin-bottom: 50px; }
+
+/* Ficha: portada + datos en tarjeta crema */
+.libro-ficha {
+    display: flex;
+    gap: 35px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #fdfbf7 0%, #f7ede2 100%);
+    border: 1px solid #ebd5c1;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 10px 25px rgba(74, 59, 50, 0.05);
+    margin-bottom: 40px;
+}
+
+.libro-portada { margin: 0; flex: 0 0 220px; }
+.libro-portada img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 6px 15px rgba(74, 59, 50, 0.2);
+}
+
+.libro-datos { flex: 1; min-width: 260px; }
+.libro-datos ul { list-style: none; }
+.libro-datos li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ebd5c1;
+}
+.libro-datos li:last-child { border-bottom: none; }
+
+/* Audio */
+.libro-audio {
+    background: #f7ede2;
+    border: 1px solid #ebd5c1;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.libro-audio h3 { text-align: center; }
+.libro-audio h3::after { margin-left: auto; margin-right: auto; }
+.libro-audio audio {
+    width: 100%;
+    max-width: 520px;
+    margin-top: 15px;
+}
+
+/* Personajes (estilo de .servicio-ind) */
+.libro-personajes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.libro-personaje {
+    flex: 1 1 200px;
+    text-align: center;
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 10px;
+    border: 1px solid #ebd5c1;
+    box-shadow: 0 6px 15px rgba(74, 59, 50, 0.04);
+    transition: transform 0.3s ease;
+}
+.libro-personaje:hover { transform: translateY(-5px); }
+.libro-personaje h4 { color: #4a3b32; font-size: 18px; margin-bottom: 8px; }
+.libro-personaje p { font-size: 14px; text-align: center; margin: 0; }
+
+/* Resumen */
+.libro-bloque > p { text-align: justify; margin-bottom: 15px; }
+.libro-nota { font-size: 13px; font-style: italic; color: #8c5e3f; text-align: left !important; }
+
+/* Enseñanzas: círculos numerados como .badge-numero */
+.libro-ensenanzas {
+    list-style: none;
+    counter-reset: ensenanza;
+}
+.libro-ensenanzas li {
+    counter-increment: ensenanza;
+    position: relative;
+    background: #fdfbf7;
+    border: 1px solid #ebd5c1;
+    border-radius: 10px;
+    padding: 20px 20px 20px 80px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 15px rgba(74, 59, 50, 0.04);
+}
+.libro-ensenanzas li::before {
+    content: counter(ensenanza);
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #8c5e3f;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(140, 94, 63, 0.3);
+}
+.libro-ensenanzas strong { display: block; font-size: 17px; margin-bottom: 4px; }
+
+/* Galería (estilo de .libro-card) */
+.libro-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+.libro-galeria figure {
+    flex: 1 1 260px;
+    max-width: 300px;
+    background: #fdfbf7;
+    border: 1px solid #ebd5c1;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 6px 15px rgba(74, 59, 50, 0.05);
+    transition: all 0.3s ease;
+}
+.libro-galeria figure:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(140, 94, 63, 0.15);
+}
+.libro-galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+}
+.libro-galeria figcaption,
+.libro-portada figcaption {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a3b32;
+    margin-top: 10px;
+}
+
+/* Dónde conseguirlo */
+.libro-comprar {
+    background: #f7ede2;
+    border: 1px solid #ebd5c1;
+    border-radius: 12px;
+    padding: 30px;
+}
+.libro-comprar ul { list-style: none; }
+.libro-comprar li {
+    padding: 12px 0;
+    border-bottom: 1px solid #ebd5c1;
+}
+.libro-comprar li:last-child { border-bottom: none; }
+.libro-comprar a {
+    color: #8c5e3f;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+.libro-comprar a:hover { color: #6c462d; border-bottom-color: #6c462d; }
+
+@media (max-width: 700px) {
+    .libro-ficha { padding: 25px 20px; justify-content: center; }
+    .libro-portada { flex-basis: 200px; }
+    .libro-ensenanzas li { padding-left: 75px; }
+}

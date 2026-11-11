@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Cuentos y Reseñas Literarias</title>
+    <link rel="stylesheet" href="css/estilo1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-centro">
+            <div class="nav-contenedor">
+                <a href="#" data-hover><span>Inicio</span></a>
+                <a href="#Acerca" data-hover><span>Acerca de</span></a>
+                <a href="#porta" data-hover><span>Reseña de libros</span></a>
+                <a href="#servicios" data-hover><span>Servicios</span></a>
+                <a href="#contacto" data-hover><span>Contactos</span></a>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="redes-sociales">
+
+                <a href="https://www.facebook.com/"
+                    target="_blank" rel="noopener noreferrer">
+                <img src="img/Facebook.png" alt="Facebook">
+                </a>
+
+                <a href="https://www.instagram.com/"
+                        target="_blank" rel="noopener noreferrer">
+                <img src="img/Instagram.png" alt="Instagram">
+                </a>
+
+                <a href="https://www.tiktok.com/"
+                    target="_blank" rel="noopener noreferrer">
+                <img src="img/tumblr.png" alt="Tumblr">
+                </a>
+
+            </div>
+
+            </div>
+        </nav>
+
+        </nav>
+
+        <section class="texto-header">
+            <h1>¡Cuéntanos Cuentos!</h1>
+            <h2>Historias, opiniones y pasión por los libros</h2>
+        </section>
+
+    </header>
+
+    <main>
+        <section id="Acerca" class="contenedor sobre-nosotros">
+            <div class="intro-tarjeta">
+                <h2 class="titulo-destacado">Explora mundos mágicos e historias inolvidables en cada página</h2>
+                <div class="contenido-intro">
+                    <div class="badge-numero">✦</div>
+                    <div class="texto-intro">
+                        <h3>Historias que atrapan desde el inicio</h3>
+                        <p>Sumérgete en una selección especial de cuentos y relatos cortos diseñados para despertar tu imaginación, transportarte a otros universos y hacerte vivir grandes aventuras a través de la lectura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="porta" class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Reseña de libros</h2>
+                <div class="galeria-port">
+                    
+                    <a class="libro-card" href="Libro1.html">
+                        <div class="imagen-port">
+                            <img src="img/las-mil-y-una-noches-portada.jpg" alt="Proximamente">
+                        </div>
+                        <h3>El rey Schahriar y su hermano, el rey Schahzaman</h3>
+                        <p>Reseña de:</p>
+                        <p>Aldo Aquino Melendez</p>
+                    </a>
+
+                     <a class="libro-card" href="Libro2.html">
+                        <div class="imagen-port">
+                            <img src="img/visir-ruyan-portada.jpg" alt="Proximamente">
+                        </div>
+                        <h3>Historia del visir del rey Yunán y del médico Ruyán</h3>
+                        <p>Reseña de:</p>
+                        <p>Jose Diego Baltazar Montesinos</p>
+                    </a>
+
+                    <a class="libro-card" href="Libro3.html">
+                        <div class="imagen-port">
+                            <img src="img/principe_vampiro_mil_una_noches.jpg" alt="Proximamente">
+                        </div>
+                        <h3>Historia del príncipe y la vampiro</h3>
+                        <p>Reseña de:</p>
+                        <p>Alberto Herrera Gomez</p>
+                    </a>
+
+                    <a class="libro-card" href="Libro4.html">
+                        <div class="imagen-port">
+                            <img src="img/joven_encantado_peces.jpg" alt="Proximamente">
+                        </div>
+                        <h3>Historia del joven encantado y de los peces</h3>
+                        <p>Reseña de:</p>
+                        <p>Jesús Guillermo Román Sánchez</p>
+                    </a>
+
+                    <a class="libro-card" href="Libro5.html">
+                        <div class="imagen-port">
+                            <img src="img/El-mandadero-y-de-las-tres-doncellas.jpg" alt="Proximamente">
+                        </div>
+                        <h3>El mandadero y de las tres doncellas</h3>
+                        <p>Reseña de:</p>
+                        <p>Luis Ángel Romero Hernández</p>
+                    </a>
+
+                    <a class="libro-card" href="Libro6.html">
+                        <div class="imagen-port">
+                            <img src="img/proximamente.webp" alt="Proximamente">
+                        </div>
+                        <h3>Proximamente</h3>
+                        <p>Reseña de:</p>
+                        <p>Proximamente</p>
+                    </a>
+
+                    <div class="contenedor-mostrar">
+                        <a href="ReseñaLib.html" class="btn-mostrar">
+                            Mostrar más
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div id="vista-libro" class="contenedor oculto">
+            <button class="btn-volver" onclick="volverAGaleria()">Volver al inicio</button>
+            <div id="contenido-libro"></div>
+        </div>
+
+        <section id="servicios" class="acerca-servicios">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Lo que encontrarás aquí</h2>
+                <div class="servicio-cont">
+                    
+                    <div class="servicio-ind">
+                        <h3>Relatos Breves</h3>
+                        <p>Lecturas rápidas y cautivadoras ideales para disfrutar en cualquier momento del día.</p>
+                    </div>
+
+                    <div class="servicio-ind">
+                        <h3>Análisis Literarios</h3>
+                        <p>Opiniones profundas, contextos de los autores y reflexiones sobre cada obra.</p>
+                    </div>
+
+                    <div class="servicio-ind">
+                        <h3>Recomendaciones</h3>
+                        <p>Guías personalizadas para ayudarte a descubrir tu próximo libro favorito.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Teléfono</h4>
+                <p>+52 123 456 7890</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>contacto@cuentanoscuentos.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Ubicación</h4>
+                <p>Biblioteca Central</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Blog de Cuentos | Reseñas Literarias</h2>
+    </footer>
+
+    <script>
+        function cargarLibro(urlArchivo) {
+            fetch(urlArchivo)
+                .then(respuesta => respuesta.text())
+                .then(html => {
+                    document.getElementById('contenido-libro').innerHTML = html;
+                    document.getElementById('porta').classList.add('oculto');
+                    document.getElementById('Acerca').classList.add('oculto');
+                    document.getElementById('servicios').classList.add('oculto');
+                    document.getElementById('vista-libro').classList.remove('oculto');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                })
+                .catch(error => console.error('Error al cargar el libro:', error));
+        }
+
+        function volverAGaleria() {
+            document.getElementById('vista-libro').classList.add('oculto');
+            document.getElementById('porta').classList.remove('oculto');
+            document.getElementById('Acerca').classList.remove('oculto');
+            document.getElementById('servicios').classList.remove('oculto');
+        }
+
+        
+        // FILTROS DEL CATALOGO
+
+        let filtrosSeleccionados = {
+            genero: "",
+            resenador: "",
+            fecha: ""
+        };
+
+        function filtrarLibros(tipo, valor, boton) {
+
+        // Guardar el filtro seleccionado
+            filtrosSeleccionados[tipo] =
+            valor === "todos" ? "" : valor;
+
+        // Cambiar el boton activo del grupo
+            const grupo = boton.closest(".grupo-filtro");
+
+            grupo.querySelectorAll(".filtro-btn").forEach(btn => {
+            btn.classList.remove("activo");
+        });
+
+            boton.classList.add("activo");
+
+        // Aplicar todos los filtros
+            aplicarFiltros();
+        }
+
+
+        function aplicarFiltros() {
+
+            const libros = document.querySelectorAll(
+                "#galeria-libros .libro-card"
+        );
+
+            let encontrados = 0;
+
+            libros.forEach(libro => {
+
+        const genero = libro.dataset.genero;
+        const resenador = libro.dataset.resenador;
+        const fecha = libro.dataset.fecha;
+
+        const coincideGenero =
+            !filtrosSeleccionados.genero ||
+            genero === filtrosSeleccionados.genero;
+
+        const coincideResenador =
+            !filtrosSeleccionados.resenador ||
+            resenador === filtrosSeleccionados.resenador;
+
+        const coincideFecha =
+            !filtrosSeleccionados.fecha ||
+            fecha === filtrosSeleccionados.fecha;
+
+        const mostrar =
+            coincideGenero &&
+            coincideResenador &&
+            coincideFecha;
+        
+        // ORDENAR LOS LIBROS POR FECHA
+
+        const galeria = document.getElementById("galeria-libros");
+
+        const tarjetas = Array.from(
+                galeria.querySelectorAll(".libro-card")
+        );
+
+            tarjetas.sort((a, b) => {
+
+        const fechaA = new Date(a.dataset.publicacion);
+        const fechaB = new Date(b.dataset.publicacion);
+
+        return ordenCronologico === "recientes"
+            ? fechaB - fechaA
+            : fechaA - fechaB;
+
+        });
+
+            tarjetas.forEach(tarjeta => {
+            galeria.appendChild(tarjeta);
+        });
+
+            libro.style.display = mostrar ? "" : "none";
+
+        if (mostrar) {
+           encontrados++;
+            }
+        });
+
+    // Mostrar mensaje cuando no hay resultados
+        const mensaje = document.getElementById("sin-resultados");
+
+            if (mensaje) {
+            mensaje.classList.toggle("oculto", encontrados > 0);
+        }
+    }
+
+
+    // LIMPIAR TODOS LOS FILTROS
+
+        function limpiarFiltros() {
+
+            filtrosSeleccionados = {
+            genero: "",
+            resenador: "",
+            fecha: ""
+        };
+
+    // Restaurar botones
+            document.querySelectorAll(".filtro-btn").forEach(boton => {
+
+            boton.classList.remove("activo");
+
+        if (
+            boton.textContent.trim() === "Todos" ||
+            boton.textContent.trim() === "Todas las fechas"
+            ) {
+                boton.classList.add("activo");
+        }
+
+        });
+
+    // Mostrar nuevamente todos los libros
+        document.querySelectorAll(
+            "#galeria-libros .libro-card"
+        ).forEach(libro => {
+            libro.style.display = "";
+        });
+
+            document.getElementById("sin-resultados")
+            .classList.add("oculto");
+        }
+    // ORDENAR LIBROS CRONOLOGICAMENTE
+
+        let ordenCronologico = "recientes";
+
+        function ordenarLibros(orden, boton) {
+
+            ordenCronologico = orden;
+
+        const grupo = boton.closest(".grupo-filtro");
+
+            grupo.querySelectorAll(".filtro-btn").forEach(btn => {
+            btn.classList.remove("activo");
+        });
+
+            boton.classList.add("activo");
+
+            aplicarFiltros();
+        }
+
+    </script>
+</body>
+</html>

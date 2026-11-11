@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseña de todos los libros</title>
+
+    <link rel="stylesheet" href="css/estilo1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <h2 class="titulo-seccion">Todos nuestros libros</h2>
+
+    <div class="catalogo-layout">
+
+        <!-- PANEL DE FILTROS -->
+        <aside class="panel-filtros">
+
+            <h3>Filtrar libros</h3>
+
+            <!-- FILTRO POR GENERO -->
+            <div class="grupo-filtro">
+                <h4>Género literario</h4>
+
+                <button class="filtro-btn activo"
+                    onclick="filtrarLibros('genero', 'todos', this)">
+                    Todos
+                </button>
+
+                <button class="filtro-btn"
+                    onclick="filtrarLibros('genero', 'Fantasía', this)">
+                    Fantasía
+                </button>
+
+                <button class="filtro-btn"
+                    onclick="filtrarLibros('genero', 'Cuento', this)">
+                    Cuento
+                </button>
+
+                <button class="filtro-btn"
+                    onclick="filtrarLibros('genero', 'Romance', this)">
+                    Romance
+                </button>
+
+                <button class="filtro-btn"
+                    onclick="filtrarLibros('genero', 'Ciencia ficción', this)">
+                    Ciencia ficción
+                </button>
+
+                <button class="filtro-btn"
+                    onclick="filtrarLibros('genero', 'Tradicional', this)">
+                    Tradicional
+                </button>
+            </div>
+
+            <!-- FILTRO POR RESEÑADOR -->
+            <div class="grupo-filtro">
+                <h4>Reseñada por</h4>
+
+                <button class="filtro-btn activo"
+                    onclick="filtrarLibros('resenador', 'todos', this)">
+                    Todos
+                </button>
+
+                <button class="filtro-btn"
+                    onclick="filtrarLibros('resenador', 'Aldo Aquino Melendez', this)">
+                    Aldo Aquino Meléndez
+                </button>
+
+                <button class="filtro-btn"
+                    onclick="filtrarLibros('resenador', 'Jose Diego Baltazar Montesinos', this)">
+                    José Diego Baltazar Montesinos
+                </button>
+
+                <button class="filtro-btn"
+                    onclick="filtrarLibros('resenador', 'Alberto Herrera Gomez', this)">
+                    Alberto Herrera Gómez
+                </button>
+
+                <button class="filtro-btn"
+                    onclick="filtrarLibros('resenador', 'Jesus Guillermo Roman Sanchez', this)">
+                    Jesus Guillermo Roman Sanchez
+                </button>
+
+                <button class="filtro-btn"
+                    onclick="filtrarLibros('resenador', 'Luis Angel Romero Hernandez', this)">
+                    Luis Angel Romero Hernández
+                </button>
+
+                <button class="filtro-btn"
+                    onclick="filtrarLibros('resenador', 'Nestor Oscar Totolhua Escalante', this)">
+                    Nestor Oscar Totolhua Escalante
+                </button>
+            </div>
+
+            <!-- ORDEN CRONOLOGICO -->
+            <div class="grupo-filtro">
+                <h4>Orden cronológico</h4>
+
+                    <button class="filtro-btn activo"onclick="ordenarLibros('recientes', this)">
+                        Más recientes
+                    </button>
+
+                    <button class="filtro-btn"onclick="ordenarLibros('antiguos', this)">
+                        Más antiguas
+                    </button>
+            </div>
+
+                    <button class="btn-limpiar" onclick="limpiarFiltros()">
+                         Limpiar filtros
+                    </button>
+
+        </aside>
+
+
+        <!-- CONTENIDO DE LOS LIBROS -->
+        <div class="catalogo-contenido">
+
+            <h3 class="titulo-resultados">Catálogo de reseñas</h3>
+
+            <div class="galeria-port" id="galeria-libros">
+
+                <!-- LIBRO 1 -->
+                <a class="libro-card"
+                    data-genero="Cuento"
+                    data-resenador="Aldo Aquino Melendez"
+                    data-publicacion="2026-11-06"
+                    href="Libro1.html">
+
+                    <div class="imagen-port">
+                        <img src="img/las-mil-y-una-noches-portada.jpg" alt="Libro 1">
+                    </div>
+
+                    <h3>El rey Schahriar y su hermano, el rey Schahzaman</h3>
+                    <p>Reseña de:</p>
+                    <p>Aldo Aquino Melendez</p>
+                </a>
+
+
+                <!-- LIBRO 2 -->
+                <a class="libro-card"
+                    data-genero="Tradicional"
+                    data-resenador="Jose Diego Baltazar Montesinos"
+                    data-publicacion="2026-11-07"
+                    href="Libro2.html">
+
+                    <div class="imagen-port">
+                        <img src="img/visir-ruyan-portada.jpg" alt="Libro 2">
+                    </div>
+
+                    <h3>Historia del visir del rey Yunán y del médico Ruyán</h3>
+                    <p>Reseña de:</p>
+                    <p>Jose Diego Baltazar Montesinos</p>
+                </a>
+
+
+                <!-- LIBRO 3 -->
+                <a class="libro-card"
+                    data-genero="Fantasía"
+                    data-resenador="Alberto Herrera Gomez"
+                    data-publicacion="2026-11-08"
+                    href="Libro3.html">
+
+                    <div class="imagen-port">
+                        <img src="img/principe_vampiro_mil_una_noches.jpg" alt="Libro 3">
+                    </div>
+
+                    <h3>Historia del príncipe y la vampiro</h3>
+                    <p>Reseña de:</p>
+                    <p>Alberto Herrera Gomez</p>
+                </a>
+
+                 <!-- LIBRO 4 -->
+                <a class="libro-card"
+                    data-genero="Fantasía"
+                    data-resenador="Jesus Guillermo Roman Sanchez"
+                    data-publicacion="2026-11-09"
+                    href='Libro4.html'>
+
+                    <div class="imagen-port">
+                        <img src="img/joven_encantado_peces.jpg" alt="Libro 4">
+                    </div>
+
+                    <h3>Historia del joven encantado y de los peces</h3>
+                    <p>Reseña de:</p>
+                    <p>Jesus Guillermo Roman Sanchez</p>
+                </a>
+
+                <!-- LIBRO 5 -->
+                <a class="libro-card"
+                    data-genero="Fantasía"
+                    data-resenador="Luis Angel Romero Hernandez"
+                    data-publicacion="2026-11-10"
+                    href='Libro5.html'>
+
+                <div class="imagen-port">
+                    <img src="img/El-mandadero-y-de-las-tres-doncellas.jpg" alt="Libro 5">
+                </div>
+
+                <h3>El mandadero y de las tres doncellas</h3>
+                <p>Reseña de:</p>
+                <p>Luis Angel Romero Hernandez</p>
+            </a>
+
+                <!-- LIBRO 6 -->
+                <div class="libro-card"
+                    data-genero="??"
+                    data-resenador="??"
+                    data-publicacion="2026-11-08">
+
+                    <div class="imagen-port">
+                        <img src="img/proximamente.webp" alt="Libro 3">
+                    </div>
+
+                    <h3>Próximamente</h3>
+                    <p>Reseña de:</p>
+                    <p>Proximamente</p>
+                </div>
+
+                <!-- AQUI SE AGREGAN MAS LIBROS -->
+
+            </div>
+
+            <p id="sin-resultados" class="sin-resultados oculto">
+                No se encontraron libros con los filtros seleccionados.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="contenedor-regreso">
+        <a class="btn-volver" href="pagina.html#porta">
+            Volver al inicio
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
